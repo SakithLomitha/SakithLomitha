@@ -1,8 +1,7 @@
 <div align="center">
 
 <!-- HEADER BANNER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,50:0d2137,100:0a1628&height=200&section=header&text=XYRIX&fontSize=80&fontColor=4fc3f7&fontAlignY=38&desc=◈%20Be%20Water%2C%20My%20Friend%20◈&descAlignY=62&descColor=81d4fa&animation=fadeIn&fontStyle=bold"/>
-
+<img width="100%" src="./banner.svg" alt="XYRIX Banner"/>
 </div>
 
 <div align="center">
@@ -110,4 +109,4 @@ water does not fight the stone — it outlasts it
 
 </div>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1628,50:0d2137,100:0a0f1e&height=100&section=footer&animation=fadeIn"/>
+<img width="100%" src="./banner.svg" alt=""/>
