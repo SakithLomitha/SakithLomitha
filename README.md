@@ -6,17 +6,11 @@
 
 ![Profile Views](https://komarev.com/ghpvc/?username=SakithLomitha&label=Profile+views&color=4fc3f7&style=flat-square)
 
-</div>
-
 <br/>
 
-```
-╔══════════════════════════════════════════════════════════════╗
-║          Shapeless  ·  Formless  ·  Like  Water              ║
-╚══════════════════════════════════════════════════════════════╝
-```
+**Shapeless · Formless · Like Water**
 
-<div align="center">
+<br/>
 
 [![Ethical Hacking](https://img.shields.io/badge/⬡-ETHICAL%20HACKING%20%26%20APPSEC-0d2137?style=for-the-badge&labelColor=0a1628&color=1565c0&logoColor=4fc3f7)](https://github.com/SakithLomitha)
 [![Location](https://img.shields.io/badge/◈-SRI%20LANKA-0a1628?style=for-the-badge&labelColor=0a1628&color=0d47a1)](https://github.com/SakithLomitha)
@@ -101,8 +95,6 @@ I work across C/C++, Rust, and SQL. I'm especially interested in memory safety, 
 
 <div align="center">
 
-```
-water does not fight the stone — it outlasts it
-```
+*water does not fight the stone — it outlasts it*
 
 </div>
