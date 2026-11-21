@@ -29,17 +29,31 @@
       .w1 { animation: wave1 6s linear infinite; }
       .w2 { animation: wave2 9s linear infinite; }
       .w3 { animation: wave3 12s linear infinite reverse; }
-      .title { animation: fadeup 1.2s ease-out forwards; opacity: 0; }
-      .sub   { animation: fadeup 1.2s ease-out 0.5s forwards; opacity: 0; }
-      .dot1  { animation: pulse 3s ease-in-out infinite; }
-      .dot2  { animation: pulse 3s ease-in-out 1s infinite; }
+      .dot1 { animation: pulse 3s ease-in-out infinite; }
+      .dot2 { animation: pulse 3s ease-in-out 1s infinite; }
+
+      .letter {
+        opacity: 0;
+        animation: flowIn 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      }
+      .l1 { animation-delay: 0.2s; }
+      .l2 { animation-delay: 0.4s; }
+      .l3 { animation-delay: 0.6s; }
+      .l4 { animation-delay: 0.8s; }
+      .l5 { animation-delay: 1.0s; }
+      .sub { animation: subIn 1.2s ease-out 1.8s both; }
 
       @keyframes wave1 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
       @keyframes wave2 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
       @keyframes wave3 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
-      @keyframes fadeup {
-        0%   { opacity: 0; transform: translateY(12px); }
-        100% { opacity: 1; transform: translateY(0); }
+      @keyframes flowIn {
+        0%   { opacity: 0; transform: translateY(18px) skewX(-12deg); }
+        60%  { opacity: 1; transform: translateY(-3px) skewX(0deg); }
+        100% { opacity: 1; transform: translateY(0) skewX(0deg); }
+      }
+      @keyframes subIn {
+        0%   { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 0.9; transform: translateY(0); }
       }
       @keyframes pulse {
         0%, 100% { opacity: 0.4; }
@@ -62,26 +76,27 @@
     </g>
   </g>
 
-  <line x1="28" y1="18" x2="72" y2="18" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="28" y1="18" x2="28" y2="58" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="788" y1="18" x2="832" y2="18" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="832" y1="18" x2="832" y2="58" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="28" y1="182" x2="72" y2="182" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="28" y1="142" x2="28" y2="182" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="788" y1="182" x2="832" y2="182" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
-  <line x1="832" y1="142" x2="832" y2="182" stroke="#4fc3f7" stroke-width="1.5" opacity="0.4"/>
+  <g stroke="#4fc3f7" stroke-width="1.5" opacity="0.4">
+    <line x1="28" y1="18" x2="72" y2="18"/>
+    <line x1="28" y1="18" x2="28" y2="58"/>
+    <line x1="788" y1="18" x2="832" y2="18"/>
+    <line x1="832" y1="18" x2="832" y2="58"/>
+    <line x1="28" y1="182" x2="72" y2="182"/>
+    <line x1="28" y1="142" x2="28" y2="182"/>
+    <line x1="788" y1="182" x2="832" y2="182"/>
+    <line x1="832" y1="142" x2="832" y2="182"/>
+  </g>
 
-  <circle class="dot1" cx="318" cy="150" r="3" fill="#4fc3f7"/>
-  <circle class="dot2" cx="542" cy="150" r="3" fill="#4fc3f7"/>
+  <circle class="dot1" cx="210" cy="150" r="3" fill="#4fc3f7"/>
+  <circle class="dot2" cx="650" cy="150" r="3" fill="#4fc3f7"/>
 
-  <text class="title"
-    x="430" y="108"
-    font-family="'Segoe UI', Arial, sans-serif"
-    font-size="74"
-    font-weight="800"
-    text-anchor="middle"
-    fill="url(#tg)"
-    letter-spacing="10">XYRIX</text>
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
+    <text class="letter l1" x="300" y="108">X</text>
+    <text class="letter l2" x="365" y="108">Y</text>
+    <text class="letter l3" x="430" y="108">R</text>
+    <text class="letter l4" x="495" y="108">I</text>
+    <text class="letter l5" x="560" y="108">X</text>
+  </g>
 
   <text class="sub"
     x="430" y="150"
@@ -90,6 +105,5 @@
     font-weight="400"
     text-anchor="middle"
     fill="#81d4fa"
-    letter-spacing="4"
-    opacity="0.9">Be Water, My Friend</text>
+    letter-spacing="4">Be Water, My Friend</text>
 </svg>
