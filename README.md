@@ -4,10 +4,6 @@
 
 <br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=SakithLomitha&label=Profile+views&color=4fc3f7&style=flat-square)
-
-<br/>
-
 **Shapeless · Formless · Like Water**
 
 <br/>
@@ -96,5 +92,9 @@ I work across C/C++, Rust, and SQL. I'm especially interested in memory safety, 
 <div align="center">
 
 *water does not fight the stone — it outlasts it*
+
+<br/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=SakithLomitha&label=Profile+views&color=4fc3f7&style=flat-square)
 
 </div>
