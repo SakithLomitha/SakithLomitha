@@ -57,65 +57,118 @@
     <line x1="832" y1="142" x2="832" y2="182"/>
   </g>
 
-  <!-- Ripples under each letter, one per landing -->
-  <g fill="none" stroke="#4fc3f7" stroke-width="1.2">
-    <ellipse cx="300" cy="116" rx="2" ry="1" opacity="0">
-      <animate attributeName="rx" values="2;30" dur="1.2s" begin="0.8s" fill="freeze"/>
-      <animate attributeName="ry" values="1;6" dur="1.2s" begin="0.8s" fill="freeze"/>
-      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="0.8s" fill="freeze"/>
-    </ellipse>
-    <ellipse cx="365" cy="116" rx="2" ry="1" opacity="0">
-      <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.05s" fill="freeze"/>
-      <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.05s" fill="freeze"/>
-      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.05s" fill="freeze"/>
-    </ellipse>
-    <ellipse cx="430" cy="116" rx="2" ry="1" opacity="0">
-      <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.3s" fill="freeze"/>
-      <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.3s" fill="freeze"/>
-      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.3s" fill="freeze"/>
-    </ellipse>
-    <ellipse cx="495" cy="116" rx="2" ry="1" opacity="0">
-      <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.55s" fill="freeze"/>
-      <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.55s" fill="freeze"/>
-      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.55s" fill="freeze"/>
-    </ellipse>
-    <ellipse cx="560" cy="116" rx="2" ry="1" opacity="0">
-      <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.8s" fill="freeze"/>
-      <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.8s" fill="freeze"/>
-      <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.8s" fill="freeze"/>
-    </ellipse>
+  <!-- Floating group: XYRIX, ripples, and splashes bob together on the water -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
+
+    <!-- Ripples at the water line (y=116) -->
+    <g fill="none" stroke="#4fc3f7" stroke-width="1.2">
+      <ellipse cx="300" cy="116" rx="2" ry="1" opacity="0">
+        <animate attributeName="rx" values="2;30" dur="1.2s" begin="0.8s" fill="freeze"/>
+        <animate attributeName="ry" values="1;6" dur="1.2s" begin="0.8s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="0.8s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="365" cy="116" rx="2" ry="1" opacity="0">
+        <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.05s" fill="freeze"/>
+        <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.05s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.05s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="430" cy="116" rx="2" ry="1" opacity="0">
+        <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.3s" fill="freeze"/>
+        <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.3s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.3s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="495" cy="116" rx="2" ry="1" opacity="0">
+        <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.55s" fill="freeze"/>
+        <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.55s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.55s" fill="freeze"/>
+      </ellipse>
+      <ellipse cx="560" cy="116" rx="2" ry="1" opacity="0">
+        <animate attributeName="rx" values="2;30" dur="1.2s" begin="1.8s" fill="freeze"/>
+        <animate attributeName="ry" values="1;6" dur="1.2s" begin="1.8s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0.7;0" keyTimes="0;0.1;1" dur="1.2s" begin="1.8s" fill="freeze"/>
+      </ellipse>
+    </g>
+
+    <!-- Splash droplets -->
+    <g fill="#81d4fa">
+      <circle cx="300" cy="116" r="2.2" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -18" dur="0.8s" begin="0.8s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="0.8s" fill="freeze"/>
+      </circle>
+      <circle cx="300" cy="116" r="1.8" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 -16" dur="0.8s" begin="0.82s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="0.82s" fill="freeze"/>
+      </circle>
+
+      <circle cx="365" cy="116" r="2.2" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -18" dur="0.8s" begin="1.05s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.05s" fill="freeze"/>
+      </circle>
+      <circle cx="365" cy="116" r="1.8" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 -16" dur="0.8s" begin="1.07s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.07s" fill="freeze"/>
+      </circle>
+
+      <circle cx="430" cy="116" r="2.2" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -18" dur="0.8s" begin="1.3s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.3s" fill="freeze"/>
+      </circle>
+      <circle cx="430" cy="116" r="1.8" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 -16" dur="0.8s" begin="1.32s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.32s" fill="freeze"/>
+      </circle>
+
+      <circle cx="495" cy="116" r="2.2" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -18" dur="0.8s" begin="1.55s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.55s" fill="freeze"/>
+      </circle>
+      <circle cx="495" cy="116" r="1.8" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 -16" dur="0.8s" begin="1.57s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.57s" fill="freeze"/>
+      </circle>
+
+      <circle cx="560" cy="116" r="2.2" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -18" dur="0.8s" begin="1.8s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.8s" fill="freeze"/>
+      </circle>
+      <circle cx="560" cy="116" r="1.8" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 -16" dur="0.8s" begin="1.82s" fill="freeze"/>
+        <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.2;1" dur="0.8s" begin="1.82s" fill="freeze"/>
+      </circle>
+    </g>
+
+    <!-- Letters drop in one at a time and settle with a small bounce -->
+    <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.2s" fill="freeze"/>
+        <text x="300" y="108">X</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.45s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.45s" fill="freeze"/>
+        <text x="365" y="108">Y</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.7s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.7s" fill="freeze"/>
+        <text x="430" y="108">R</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.95s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.95s" fill="freeze"/>
+        <text x="495" y="108">I</text>
+      </g>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="1.2s" fill="freeze"/>
+        <text x="560" y="108">X</text>
+      </g>
+    </g>
   </g>
 
-  <!-- Letters drop in one at a time and settle with a small bounce -->
-  <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.2s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.2s" fill="freeze"/>
-      <text x="300" y="108">X</text>
-    </g>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.45s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.45s" fill="freeze"/>
-      <text x="365" y="108">Y</text>
-    </g>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.7s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.7s" fill="freeze"/>
-      <text x="430" y="108">R</text>
-    </g>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="0.95s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="0.95s" fill="freeze"/>
-      <text x="495" y="108">I</text>
-    </g>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.2s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 -150;0 0;0 -10;0 0" keyTimes="0;0.6;0.8;1" dur="1s" begin="1.2s" fill="freeze"/>
-      <text x="560" y="108">X</text>
-    </g>
-  </g>
-
-  <!-- Subtitle -->
+  <!-- Subtitle (stays still for readability) -->
   <text x="430" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#81d4fa" letter-spacing="4" opacity="0">Be Water, My Friend
     <animate attributeName="opacity" values="0;0.9" dur="1s" begin="2s" fill="freeze"/>
   </text>
