@@ -15,9 +15,12 @@
 
   <rect width="860" height="200" fill="url(#bg)" rx="8"/>
 
+  <!-- Waves: one slow animated layer, one static layer -->
   <g clip-path="url(#clip)">
-    <path fill="#1565c0" fill-opacity="0.35" d="M0,145 C80,130 130,160 200,145 C270,130 310,160 380,145 C450,130 490,160 560,145 C630,130 670,160 740,145 C800,135 840,145 860,145 L860,200 L0,200 Z"/>
     <path fill="#0d47a1" fill-opacity="0.25" d="M0,158 C90,143 140,168 220,155 C300,142 340,168 420,155 C500,142 540,168 620,155 C700,142 740,168 820,155 L860,158 L860,200 L0,200 Z"/>
+    <path fill="#1565c0" fill-opacity="0.35" d="M0,145 C80,130 130,160 200,145 C270,130 310,160 380,145 C450,130 490,160 560,145 C630,130 670,160 740,145 C800,135 840,145 860,145 L860,200 L0,200 Z">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="10s" repeatCount="indefinite"/>
+    </path>
   </g>
 
   <g stroke="#4fc3f7" stroke-width="1.5" opacity="0.4">
@@ -31,18 +34,39 @@
     <line x1="832" y1="142" x2="832" y2="182"/>
   </g>
 
-  <text x="430" y="108"
-    font-family="'Segoe UI', Arial, sans-serif"
-    font-size="74" font-weight="800"
-    text-anchor="middle" letter-spacing="10"
-    fill="url(#tg)">XYRIX</text>
+  <!-- Title: letters drop in once, then the whole title floats gently -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="5s" repeatCount="indefinite"/>
+    <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
+      <text x="300" y="108" opacity="0">X
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.5s" begin="0.2s" fill="freeze"/>
+      </text>
+      <text x="365" y="108" opacity="0">Y
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.4s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.5s" begin="0.4s" fill="freeze"/>
+      </text>
+      <text x="430" y="108" opacity="0">R
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.5s" begin="0.6s" fill="freeze"/>
+      </text>
+      <text x="495" y="108" opacity="0">I
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.8s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.5s" begin="0.8s" fill="freeze"/>
+      </text>
+      <text x="560" y="108" opacity="0">X
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.0s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.5s" begin="1.0s" fill="freeze"/>
+      </text>
+    </g>
+  </g>
 
+  <!-- Subtitle fades in once -->
   <text x="430" y="150"
     font-family="'Segoe UI', Arial, sans-serif"
     font-size="14" font-weight="400"
     text-anchor="middle" letter-spacing="4"
-    fill="#81d4fa" opacity="0.9">Be Water, My Friend</text>
-
-  <circle cx="210" cy="150" r="3" fill="#4fc3f7" opacity="0.7"/>
-  <circle cx="650" cy="150" r="3" fill="#4fc3f7" opacity="0.7"/>
+    fill="#81d4fa" opacity="0">Be Water, My Friend
+    <animate attributeName="opacity" values="0;0.9" dur="1s" begin="1.6s" fill="freeze"/>
+  </text>
 </svg>
