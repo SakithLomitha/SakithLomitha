@@ -25,57 +25,37 @@
     <clipPath id="clip">
       <rect width="860" height="200" rx="8"/>
     </clipPath>
-    <style>
-      .w1 { animation: wave1 6s linear infinite; }
-      .w2 { animation: wave2 9s linear infinite; }
-      .w3 { animation: wave3 12s linear infinite reverse; }
-      .dot1 { animation: pulse 3s ease-in-out infinite; }
-      .dot2 { animation: pulse 3s ease-in-out 1s infinite; }
-
-      .letter {
-        opacity: 0;
-        animation: flowIn 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-      }
-      .l1 { animation-delay: 0.2s; }
-      .l2 { animation-delay: 0.4s; }
-      .l3 { animation-delay: 0.6s; }
-      .l4 { animation-delay: 0.8s; }
-      .l5 { animation-delay: 1.0s; }
-      .sub { animation: subIn 1.2s ease-out 1.8s both; }
-
-      @keyframes wave1 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
-      @keyframes wave2 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
-      @keyframes wave3 { 0% { transform: translateX(0); } 100% { transform: translateX(-860px); } }
-      @keyframes flowIn {
-        0%   { opacity: 0; transform: translateY(18px) skewX(-12deg); }
-        60%  { opacity: 1; transform: translateY(-3px) skewX(0deg); }
-        100% { opacity: 1; transform: translateY(0) skewX(0deg); }
-      }
-      @keyframes subIn {
-        0%   { opacity: 0; transform: translateY(10px); }
-        100% { opacity: 0.9; transform: translateY(0); }
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.4; }
-        50%      { opacity: 1; }
-      }
-    </style>
+    <clipPath id="titleReveal">
+      <rect x="0" y="0" width="0" height="200">
+        <animate attributeName="width" values="0;860" dur="2.4s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="subReveal">
+      <rect x="0" y="0" width="0" height="200">
+        <animate attributeName="width" values="0;860" dur="2s" begin="2.4s" fill="freeze"/>
+      </rect>
+    </clipPath>
   </defs>
 
   <rect width="860" height="200" fill="url(#bg)" rx="8"/>
 
+  <!-- Waves -->
   <g clip-path="url(#clip)">
-    <g class="w1">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="6s" repeatCount="indefinite"/>
       <path d="M0,145 C60,130 100,160 160,145 C220,130 260,160 320,145 C380,130 420,160 480,145 C540,130 580,160 640,145 C700,130 740,160 800,145 C840,135 860,145 860,145 C920,130 960,160 1020,145 C1080,130 1120,160 1180,145 C1240,130 1280,160 1340,145 C1400,130 1440,160 1500,145 C1560,130 1600,160 1660,145 C1700,135 1720,145 1720,145 L1720,200 L0,200 Z" fill="url(#wave1g)"/>
     </g>
-    <g class="w2">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="9s" repeatCount="indefinite"/>
       <path d="M0,158 C80,143 130,168 200,155 C270,142 310,168 380,155 C450,142 490,168 560,155 C630,142 670,168 740,155 C800,144 840,158 860,155 C940,143 990,168 1060,155 C1130,142 1170,168 1240,155 C1310,142 1350,168 1420,155 C1490,142 1530,168 1600,155 C1660,144 1700,158 1720,155 L1720,200 L0,200 Z" fill="url(#wave2g)"/>
     </g>
-    <g class="w3">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="12s" repeatCount="indefinite"/>
       <path d="M0,168 C50,160 90,175 140,168 C190,161 230,175 280,168 C330,161 370,175 420,168 C470,161 510,175 560,168 C610,161 650,175 700,168 C750,161 800,170 860,168 C910,160 950,175 1000,168 C1050,161 1090,175 1140,168 C1190,161 1230,175 1280,168 C1330,161 1370,175 1420,168 C1470,161 1510,175 1560,168 C1610,161 1660,170 1720,168 L1720,200 L0,200 Z" fill="url(#wave3g)"/>
     </g>
   </g>
 
+  <!-- Corner brackets -->
   <g stroke="#4fc3f7" stroke-width="1.5" opacity="0.4">
     <line x1="28" y1="18" x2="72" y2="18"/>
     <line x1="28" y1="18" x2="28" y2="58"/>
@@ -87,23 +67,36 @@
     <line x1="832" y1="142" x2="832" y2="182"/>
   </g>
 
-  <circle class="dot1" cx="210" cy="150" r="3" fill="#4fc3f7"/>
-  <circle class="dot2" cx="650" cy="150" r="3" fill="#4fc3f7"/>
-
-  <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
-    <text class="letter l1" x="300" y="108">X</text>
-    <text class="letter l2" x="365" y="108">Y</text>
-    <text class="letter l3" x="430" y="108">R</text>
-    <text class="letter l4" x="495" y="108">I</text>
-    <text class="letter l5" x="560" y="108">X</text>
+  <!-- XYRIX: screen-recording reveal, then floating -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
+    <g clip-path="url(#titleReveal)">
+      <text x="430" y="108"
+        font-family="'Segoe UI', Arial, sans-serif"
+        font-size="74" font-weight="800"
+        text-anchor="middle" letter-spacing="10"
+        fill="url(#tg)">XYRIX</text>
+    </g>
   </g>
 
-  <text class="sub"
-    x="430" y="150"
-    font-family="'Segoe UI', Arial, sans-serif"
-    font-size="14"
-    font-weight="400"
-    text-anchor="middle"
-    fill="#81d4fa"
-    letter-spacing="4">Be Water, My Friend</text>
+  <!-- Subtitle: types in with a blinking cursor -->
+  <g clip-path="url(#subReveal)">
+    <text x="430" y="150"
+      font-family="'Segoe UI', Arial, sans-serif"
+      font-size="14" font-weight="400"
+      text-anchor="middle" letter-spacing="4"
+      fill="#81d4fa">Be Water, My Friend</text>
+  </g>
+  <rect x="316" y="136" width="2" height="18" fill="#81d4fa">
+    <animate attributeName="x" values="316;544" dur="2s" begin="2.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="2.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Pulsing accent dots -->
+  <circle cx="210" cy="150" r="3" fill="#4fc3f7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="150" r="3" fill="#4fc3f7">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
 </svg>
