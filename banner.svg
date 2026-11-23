@@ -2,57 +2,27 @@
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#060d1a"/>
-      <stop offset="50%" stop-color="#0a1f36"/>
       <stop offset="100%" stop-color="#081525"/>
     </linearGradient>
     <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#29b6f6"/>
-      <stop offset="50%" stop-color="#4fc3f7"/>
       <stop offset="100%" stop-color="#81d4fa"/>
-    </linearGradient>
-    <linearGradient id="wave1g" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1565c0" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="wave2g" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d47a1" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="wave3g" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4fc3f7" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="clip">
       <rect width="860" height="200" rx="8"/>
-    </clipPath>
-    <clipPath id="titleReveal">
-      <rect x="0" y="0" width="0" height="200">
-        <animate attributeName="width" values="0;860" dur="2.4s" begin="0.3s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <clipPath id="subReveal">
-      <rect x="0" y="0" width="0" height="200">
-        <animate attributeName="width" values="0;860" dur="2s" begin="2.4s" fill="freeze"/>
-      </rect>
     </clipPath>
   </defs>
 
   <rect width="860" height="200" fill="url(#bg)" rx="8"/>
 
-  <!-- Waves -->
+  <!-- Waves: solid fills, one seamless loop each -->
   <g clip-path="url(#clip)">
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="6s" repeatCount="indefinite"/>
-      <path d="M0,145 C60,130 100,160 160,145 C220,130 260,160 320,145 C380,130 420,160 480,145 C540,130 580,160 640,145 C700,130 740,160 800,145 C840,135 860,145 860,145 C920,130 960,160 1020,145 C1080,130 1120,160 1180,145 C1240,130 1280,160 1340,145 C1400,130 1440,160 1500,145 C1560,130 1600,160 1660,145 C1700,135 1720,145 1720,145 L1720,200 L0,200 Z" fill="url(#wave1g)"/>
-    </g>
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="9s" repeatCount="indefinite"/>
-      <path d="M0,158 C80,143 130,168 200,155 C270,142 310,168 380,155 C450,142 490,168 560,155 C630,142 670,168 740,155 C800,144 840,158 860,155 C940,143 990,168 1060,155 C1130,142 1170,168 1240,155 C1310,142 1350,168 1420,155 C1490,142 1530,168 1600,155 C1660,144 1700,158 1720,155 L1720,200 L0,200 Z" fill="url(#wave2g)"/>
-    </g>
-    <g>
+    <path fill="#1565c0" fill-opacity="0.35" d="M0,145 C60,130 100,160 160,145 C220,130 260,160 320,145 C380,130 420,160 480,145 C540,130 580,160 640,145 C700,130 740,160 800,145 C840,135 860,145 860,145 C920,130 960,160 1020,145 C1080,130 1120,160 1180,145 C1240,130 1280,160 1340,145 C1400,130 1440,160 1500,145 C1560,130 1600,160 1660,145 C1700,135 1720,145 1720,145 L1720,200 L0,200 Z">
+      <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path fill="#0d47a1" fill-opacity="0.25" d="M0,158 C80,143 130,168 200,155 C270,142 310,168 380,155 C450,142 490,168 560,155 C630,142 670,168 740,155 C800,144 840,158 860,155 C940,143 990,168 1060,155 C1130,142 1170,168 1240,155 C1310,142 1350,168 1420,155 C1490,142 1530,168 1600,155 C1660,144 1700,158 1720,155 L1720,200 L0,200 Z">
       <animateTransform attributeName="transform" type="translate" values="0 0;-860 0" dur="12s" repeatCount="indefinite"/>
-      <path d="M0,168 C50,160 90,175 140,168 C190,161 230,175 280,168 C330,161 370,175 420,168 C470,161 510,175 560,168 C610,161 650,175 700,168 C750,161 800,170 860,168 C910,160 950,175 1000,168 C1050,161 1090,175 1140,168 C1190,161 1230,175 1280,168 C1330,161 1370,175 1420,168 C1470,161 1510,175 1560,168 C1610,161 1660,170 1720,168 L1720,200 L0,200 Z" fill="url(#wave3g)"/>
-    </g>
+    </path>
   </g>
 
   <!-- Corner brackets -->
@@ -67,30 +37,41 @@
     <line x1="832" y1="142" x2="832" y2="182"/>
   </g>
 
-  <!-- XYRIX: screen-recording reveal, then floating -->
+  <!-- XYRIX: letters drop in one by one, then the whole title floats gently -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
-    <g clip-path="url(#titleReveal)">
-      <text x="430" y="108"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="74" font-weight="800"
-        text-anchor="middle" letter-spacing="10"
-        fill="url(#tg)">XYRIX</text>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
+    <g font-family="'Segoe UI', Arial, sans-serif" font-size="74" font-weight="800" fill="url(#tg)" text-anchor="middle">
+      <text x="300" y="108" opacity="0">X
+        <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.2s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.6s" begin="0.2s" fill="freeze"/>
+      </text>
+      <text x="365" y="108" opacity="0">Y
+        <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.4s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.6s" begin="0.4s" fill="freeze"/>
+      </text>
+      <text x="430" y="108" opacity="0">R
+        <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.6s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.6s" begin="0.6s" fill="freeze"/>
+      </text>
+      <text x="495" y="108" opacity="0">I
+        <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.8s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.6s" begin="0.8s" fill="freeze"/>
+      </text>
+      <text x="560" y="108" opacity="0">X
+        <animate attributeName="opacity" values="0;1" dur="0.6s" begin="1.0s" fill="freeze"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -20;0 0" dur="0.6s" begin="1.0s" fill="freeze"/>
+      </text>
     </g>
   </g>
 
-  <!-- Subtitle: types in with a blinking cursor -->
-  <g clip-path="url(#subReveal)">
-    <text x="430" y="150"
-      font-family="'Segoe UI', Arial, sans-serif"
-      font-size="14" font-weight="400"
-      text-anchor="middle" letter-spacing="4"
-      fill="#81d4fa">Be Water, My Friend</text>
-  </g>
-  <rect x="316" y="136" width="2" height="18" fill="#81d4fa">
-    <animate attributeName="x" values="316;544" dur="2s" begin="2.4s" fill="freeze"/>
-    <animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="2.4s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Subtitle fades in last -->
+  <text x="430" y="150"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="14" font-weight="400"
+    text-anchor="middle" letter-spacing="4"
+    fill="#81d4fa" opacity="0">Be Water, My Friend
+    <animate attributeName="opacity" values="0;0.9" dur="1s" begin="1.8s" fill="freeze"/>
+  </text>
 
   <!-- Pulsing accent dots -->
   <circle cx="210" cy="150" r="3" fill="#4fc3f7">
