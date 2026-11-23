@@ -1,26 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44">
-  <!-- Shapeless: drops in, then vanishes -->
+  <!-- Shapeless: appears, then vanishes -->
   <g opacity="1">
     <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.25;0.3;1" dur="9s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0 -14;0 0;0 0;0 0;0 -14" keyTimes="0;0.06;0.25;0.3;1" dur="9s" repeatCount="indefinite"/>
     <text x="210" y="28" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless</text>
     <circle cx="150" cy="22" r="2.5" fill="#4fc3f7"/>
     <circle cx="270" cy="22" r="2.5" fill="#4fc3f7"/>
   </g>
 
-  <!-- Formless: drops in after Shapeless vanishes -->
+  <!-- Formless: appears after Shapeless vanishes -->
   <g opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.3;0.33;0.58;0.62;1" dur="9s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0 -14;0 -14;0 0;0 0;0 -14" keyTimes="0;0.33;0.39;0.62;1" dur="9s" repeatCount="indefinite"/>
     <text x="210" y="28" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Formless</text>
     <circle cx="150" cy="22" r="2.5" fill="#4fc3f7"/>
     <circle cx="270" cy="22" r="2.5" fill="#4fc3f7"/>
   </g>
 
-  <!-- Like Water: drops in last, then the cycle repeats -->
+  <!-- Like Water: appears last, then the cycle repeats -->
   <g opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.63;0.66;0.88;0.92;1" dur="9s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0 -14;0 -14;0 0;0 0;0 -14" keyTimes="0;0.66;0.72;0.92;1" dur="9s" repeatCount="indefinite"/>
     <text x="210" y="28" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Like Water</text>
     <circle cx="145" cy="22" r="2.5" fill="#4fc3f7"/>
     <circle cx="275" cy="22" r="2.5" fill="#4fc3f7"/>
