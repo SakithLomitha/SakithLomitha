@@ -4,7 +4,7 @@
 
 <br/>
 
-**Shapeless · Formless · Like Water**
+<img src="./tagline.svg" alt="Shapeless · Formless · Like Water"/>
 
 <br/>
 
