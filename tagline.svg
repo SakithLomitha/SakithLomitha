@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40">
+  <defs>
+    <clipPath id="t">
+      <rect x="0" y="0" width="0" height="40">
+        <animate attributeName="width" values="0;330" dur="2.5s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#t)">
+    <text x="20" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless · Formless · Like Water</text>
+  </g>
+  <rect x="20" y="10" width="2" height="20" fill="#e6edf3">
+    <animate attributeName="x" values="20;350" dur="2.5s" begin="0.3s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="0.3s" repeatCount="indefinite"/>
+  </rect>
+</svg>
