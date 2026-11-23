@@ -1,35 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44">
+<svg width="860" height="200" viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="reveal">
-      <rect x="0" y="0" width="0" height="44">
-        <animate attributeName="width" values="0;420" dur="2s" begin="0.3s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <mask id="textMask">
-      <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Shapeless · Formless · Like Water</text>
-    </mask>
-    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#e6edf3" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#81d4fa" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#e6edf3" stop-opacity="0"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060d1a"/>
+      <stop offset="100%" stop-color="#081525"/>
     </linearGradient>
+    <linearGradient id="tg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#29b6f6"/>
+      <stop offset="100%" stop-color="#81d4fa"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="860" height="200" rx="8"/>
+    </clipPath>
   </defs>
 
-  <!-- Text types in once, left to right -->
-  <g clip-path="url(#reveal)">
-    <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless · Formless · Like Water</text>
+  <rect width="860" height="200" fill="url(#bg)" rx="8"/>
+
+  <g clip-path="url(#clip)">
+    <path fill="#1565c0" fill-opacity="0.35" d="M0,145 C80,130 130,160 200,145 C270,130 310,160 380,145 C450,130 490,160 560,145 C630,130 670,160 740,145 C800,135 840,145 860,145 L860,200 L0,200 Z"/>
+    <path fill="#0d47a1" fill-opacity="0.25" d="M0,158 C90,143 140,168 220,155 C300,142 340,168 420,155 C500,142 540,168 620,155 C700,142 740,168 820,155 L860,158 L860,200 L0,200 Z"/>
   </g>
 
-  <!-- Looping shine across the text -->
-  <g mask="url(#textMask)">
-    <rect x="0" y="0" width="90" height="44" fill="url(#sheen)">
-      <animateTransform attributeName="transform" type="translate" values="-100 0;440 0" dur="3s" begin="2.3s" repeatCount="indefinite"/>
-    </rect>
+  <g stroke="#4fc3f7" stroke-width="1.5" opacity="0.4">
+    <line x1="28" y1="18" x2="72" y2="18"/>
+    <line x1="28" y1="18" x2="28" y2="58"/>
+    <line x1="788" y1="18" x2="832" y2="18"/>
+    <line x1="832" y1="18" x2="832" y2="58"/>
+    <line x1="28" y1="182" x2="72" y2="182"/>
+    <line x1="28" y1="142" x2="28" y2="182"/>
+    <line x1="788" y1="182" x2="832" y2="182"/>
+    <line x1="832" y1="142" x2="832" y2="182"/>
   </g>
 
-  <!-- Rotating loop beside the text -->
-  <g>
-    <circle cx="12" cy="22" r="7" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" stroke-dasharray="30 14"/>
-    <animateTransform attributeName="transform" type="rotate" values="0 12 22;360 12 22" dur="2.4s" repeatCount="indefinite"/>
-  </g>
+  <text x="430" y="108"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="74" font-weight="800"
+    text-anchor="middle" letter-spacing="10"
+    fill="url(#tg)">XYRIX</text>
+
+  <text x="430" y="150"
+    font-family="'Segoe UI', Arial, sans-serif"
+    font-size="14" font-weight="400"
+    text-anchor="middle" letter-spacing="4"
+    fill="#81d4fa" opacity="0.9">Be Water, My Friend</text>
+
+  <circle cx="210" cy="150" r="3" fill="#4fc3f7" opacity="0.7"/>
+  <circle cx="650" cy="150" r="3" fill="#4fc3f7" opacity="0.7"/>
 </svg>
