@@ -1,31 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44">
-  <defs>
-    <clipPath id="reveal">
-      <rect x="0" y="0" width="0" height="44">
-        <animate attributeName="width" values="0;420" dur="2s" begin="0.3s" fill="freeze"/>
-      </rect>
-    </clipPath>
-    <mask id="textMask">
-      <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Shapeless · Formless · Like Water</text>
-    </mask>
-    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#e6edf3" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#81d4fa" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#e6edf3" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
+  <!-- Shapeless types in first -->
+  <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" opacity="0">Shapeless
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.08;0.8;0.9;1" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </text>
 
-  <!-- Text types in once, left to right -->
-  <g clip-path="url(#reveal)">
-    <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless · Formless · Like Water</text>
-  </g>
+  <!-- Formless comes second -->
+  <text x="142" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" opacity="0">Formless
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2;0.28;0.8;0.9;1" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </text>
 
-  <!-- Looping shine across the text -->
-  <g mask="url(#textMask)">
-    <rect x="0" y="0" width="90" height="44" fill="url(#sheen)">
-      <animateTransform attributeName="transform" type="translate" values="-100 0;440 0" dur="3s" begin="2.3s" repeatCount="indefinite"/>
-    </rect>
-  </g>
+  <!-- Like Water comes last -->
+  <text x="244" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" opacity="0">Like Water
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.44;0.8;0.9;1" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Separators -->
+  <text x="128" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#4fc3f7" opacity="0">·
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2;0.28;0.8;0.9;1" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </text>
+  <text x="232" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#4fc3f7" opacity="0">·
+    <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.36;0.44;0.52;0.8;0.9;1" dur="7s" begin="0s" repeatCount="indefinite"/>
+  </text>
 
   <!-- Rotating loop beside the text -->
   <g>
