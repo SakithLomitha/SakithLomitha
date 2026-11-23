@@ -1,16 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="40" viewBox="0 0 360 40">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44">
   <defs>
-    <clipPath id="t">
-      <rect x="0" y="0" width="0" height="40">
-        <animate attributeName="width" values="0;330" dur="2.5s" begin="0.3s" fill="freeze"/>
+    <clipPath id="reveal">
+      <rect x="0" y="0" width="0" height="44">
+        <animate attributeName="width" values="0;420" dur="2s" begin="0.3s" fill="freeze"/>
       </rect>
     </clipPath>
+    <mask id="textMask">
+      <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Shapeless · Formless · Like Water</text>
+    </mask>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6edf3" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#81d4fa" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#e6edf3" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <g clip-path="url(#t)">
-    <text x="20" y="27" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless · Formless · Like Water</text>
+
+  <!-- Text types in once, left to right -->
+  <g clip-path="url(#reveal)">
+    <text x="30" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3">Shapeless · Formless · Like Water</text>
   </g>
-  <rect x="20" y="10" width="2" height="20" fill="#e6edf3">
-    <animate attributeName="x" values="20;350" dur="2.5s" begin="0.3s" fill="freeze"/>
-    <animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="0.3s" repeatCount="indefinite"/>
-  </rect>
+
+  <!-- Looping shine across the text -->
+  <g mask="url(#textMask)">
+    <rect x="0" y="0" width="90" height="44" fill="url(#sheen)">
+      <animateTransform attributeName="transform" type="translate" values="-100 0;440 0" dur="3s" begin="2.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Rotating loop beside the text -->
+  <g>
+    <circle cx="12" cy="22" r="7" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" stroke-dasharray="30 14"/>
+    <animateTransform attributeName="transform" type="rotate" values="0 12 22;360 12 22" dur="2.4s" repeatCount="indefinite"/>
+  </g>
 </svg>
