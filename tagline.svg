@@ -25,10 +25,4 @@
     <circle cx="145" cy="22" r="2.5" fill="#4fc3f7"/>
     <circle cx="275" cy="22" r="2.5" fill="#4fc3f7"/>
   </g>
-
-  <!-- Rotating blue loop, moved closer to the text -->
-  <g>
-    <circle cx="122" cy="22" r="7" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" stroke-dasharray="30 14"/>
-    <animateTransform attributeName="transform" type="rotate" values="0 122 22;360 122 22" dur="2.4s" repeatCount="indefinite"/>
-  </g>
 </svg>
